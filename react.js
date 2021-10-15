@@ -93,6 +93,7 @@ module.exports = {
     'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-trailing-spaces': 'error',
     'no-use-before-define': 'off',
+    quotes: ['error', 'single'],
     'react-hooks/exhaustive-deps': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react/destructuring-assignment': 'error',

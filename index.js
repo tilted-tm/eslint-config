@@ -83,6 +83,7 @@ module.exports = {
     'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-trailing-spaces': 'error',
     'no-use-before-define': 'off',
+    quotes: ['error', 'single'],
     semi: 'error',
     'sort-imports': ['error', { ignoreDeclarationSort: true, ignoreCase: true }],
     'sort-vars': ['error', { 'ignoreCase': true }]
