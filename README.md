@@ -3,11 +3,11 @@
 ## Installation
 
 ```shell script
-yarn add @tilted/eslint-config --dev
+yarn add @tilted-tm/eslint-config --dev
 
 # or using npm
 
-npm install @tilted/eslint-config --save-dev
+npm install @tilted-tm/eslint-config --save-dev
 ```
 
 ## Usage
@@ -16,14 +16,14 @@ npm install @tilted/eslint-config --save-dev
 Using `.eslintrc.json`:
 ```json
 {
-  "extends": "@tilted"
+  "extends": "@tilted-tm"
 }
 ```
 
 Using `.eslintrc.js`:
 ```javascript
 module.exports = {
-  extends: '@tilted'
+  extends: '@tilted-tm'
 }
 ```
 
@@ -31,13 +31,13 @@ module.exports = {
 Using `.eslintrc.json`:
 ```json
 {
-  "extends": "@tilted/react"
+  "extends": "@tilted-tm/react"
 }
 ```
 
 Using `.eslintrc.js`:
 ```javascript
 module.exports = {
-  extends: '@tilted/react'
+  extends: '@tilted-tm/react'
 }
 ```

@@ -1,13 +1,19 @@
 {
-  "name": "@tilted/eslint-config",
+  "name": "@tilted-tm/eslint-config",
   "version": "1.0.0",
   "description": "Default eslint config for Tilted projects",
   "main": "index.js",
-  "repository": "https://github.com/tilted-tm/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tilted-tm/eslint-config.git"
+  },
   "author": "Tilted",
   "license": "MIT",
   "private": false,
-  "keywords": ["eslint", "eslintconfig"],
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
   "dependencies": {
     "eslint-config-prettier": "8.3.0",
     "eslint-config-standard": "16.0.3",
@@ -25,5 +31,12 @@
     "eslint-plugin-react": ">= 7.26.1",
     "eslint-plugin-react-hooks": ">= 4.2.0",
     "eslint-plugin-tilted-react": ">= 1.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/tilted-tm/eslint-config/issues"
+  },
+  "homepage": "https://github.com/tilted-tm/eslint-config#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
