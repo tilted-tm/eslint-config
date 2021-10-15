@@ -90,6 +90,7 @@ module.exports = {
     indent: 'off',
     'jsx-a11y/anchor-is-valid': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
+    'jsx-quotes': ['error', 'prefer-single'],
     'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-trailing-spaces': 'error',
     'no-use-before-define': 'off',
