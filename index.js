@@ -39,8 +39,20 @@ module.exports = {
   rules: {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/indent': ['error', 2],
+    '@typescript-eslint/member-delimiter-style': ['error', {
+      'multiline': {
+        'delimiter': 'none',
+        'requireLast': true
+      },
+      'singleline': {
+        'delimiter': 'semi',
+        'requireLast': false
+      }
+    }],
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-use-before-define': 'error',
+    'space-infix-ops': 'off',
+    '@typescript-eslint/space-infix-ops': ['error', { 'int32Hint': false }],
     'brace-style': ['error', '1tbs'],
     curly: ['error', 'all'],
     'default-param-last': 'off',
