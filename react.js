@@ -1,23 +1,21 @@
 module.exports = {
-  settings: {
-    react: {
-      version: 'detect'
-    }
-  },
   extends: [
     './index.js',
     'standard-react'
   ],
-  plugins: [
-    'react',
-    'react-hooks',
-    'tilted-react'
-  ],
+  globals: {
+    JSX: true
+  },
   parserOptions: {
     ecmaFeatures: {
       jsx: true
     }
   },
+  plugins: [
+    'react',
+    'react-hooks',
+    'tilted-react'
+  ],
   rules: {
     'jsx-quotes': ['error', 'prefer-single'],
     'react-hooks/exhaustive-deps': 'off',
@@ -32,5 +30,10 @@ module.exports = {
     'react/jsx-uses-vars': 'error',
     'react/self-closing-comp': 'error',
     'tilted-react/too-few-lines-between-jsx-elements': 'error'
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    }
   }
 }

@@ -1,23 +1,4 @@
 module.exports = {
-  root: true,
-  settings: {
-    'import/resolver': {
-      alias: {
-        map: [
-          ['@assets', './src/assets'],
-          ['@components', './src/components'],
-          ['@screens', './src/screens'],
-          ['@services', './src/services']
-        ],
-        extensions: ['.js', '.jsx', '.json', '.ts', '.tsx']
-      },
-      node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx']
-      }
-    },
-    version: 'detect'
-  },
-  parser: '@typescript-eslint/parser',
   extends: [
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
@@ -25,10 +6,7 @@ module.exports = {
     'prettier',
     'standard'
   ],
-  plugins: [
-    '@typescript-eslint',
-    'import'
-  ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
@@ -36,6 +14,11 @@ module.exports = {
     tsconfigRootDir: './',
     createDefaultProgram: true
   },
+  plugins: [
+    '@typescript-eslint',
+    'import'
+  ],
+  root: true,
   rules: {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/indent': ['error', 2],
@@ -105,5 +88,22 @@ module.exports = {
     semi: 'error',
     'sort-imports': ['error', { ignoreDeclarationSort: true, ignoreCase: true }],
     'sort-vars': ['error', { 'ignoreCase': true }]
+  },
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [
+          ['@assets', './src/assets'],
+          ['@components', './src/components'],
+          ['@screens', './src/screens'],
+          ['@services', './src/services']
+        ],
+        extensions: ['.js', '.jsx', '.json', '.ts', '.tsx']
+      },
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
+      }
+    },
+    version: 'detect'
   }
 }
