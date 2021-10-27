@@ -94,9 +94,9 @@ module.exports = {
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
     'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-restricted-imports': ['error', {
-      paths: [{
-        name: '.*',
-        message: 'Use alias imports like @'
+      patterns: [{
+        group: ['.*'],
+        message: 'Use alias imports like @components/... instead'
       }]
     }],
     'no-trailing-spaces': 'error',
