@@ -22,6 +22,7 @@ module.exports = {
   root: true,
   rules: {
     '@typescript-eslint/comma-dangle': 'error',
+    '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/member-delimiter-style': ['error', {
@@ -38,6 +39,7 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': 'error',
     'space-infix-ops': 'off',
     '@typescript-eslint/space-infix-ops': ['error', { 'int32Hint': false }],
+    '@typescript-eslint/strict-boolean-expressions': 'off',
     'brace-style': ['error', '1tbs'],
     curly: ['error', 'all'],
     'default-param-last': 'off',
