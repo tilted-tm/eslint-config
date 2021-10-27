@@ -20,6 +20,7 @@ module.exports = {
   ],
   root: true,
   rules: {
+    '@typescript-eslint/comma-dangle': 'error',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/member-delimiter-style': ['error', {
