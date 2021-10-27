@@ -26,6 +26,8 @@ module.exports = {
     'react/jsx-indent': ['error', 2],
     'react/jsx-indent-props': ['error', 2],
     'react/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
+    'react/jsx-sort-props': 'error',
+    'react/jsx-tag-spacing': 'error',
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'react/self-closing-comp': 'error',
