@@ -19,11 +19,11 @@ module.exports = {
   },
   parser: '@typescript-eslint/parser',
   extends: [
-    'standard',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:jsx-a11y/recommended',
-    'prettier'
+    'prettier',
+    'standard'
   ],
   plugins: [
     '@typescript-eslint',
@@ -93,6 +93,12 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
     'no-console': ['error', { allow: ['warn', 'error'] }],
+    'no-restricted-imports': ['error', {
+      paths: [{
+        name: '.*',
+        message: 'Use alias imports like @'
+      }]
+    }],
     'no-trailing-spaces': 'error',
     'no-use-before-define': 'off',
     quotes: ['error', 'single'],
