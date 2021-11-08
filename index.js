@@ -4,7 +4,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:jsx-a11y/recommended',
     'prettier',
-    'unused-imports',
     'standard',
     'standard-with-typescript'
   ],
@@ -18,7 +17,8 @@ module.exports = {
   },
   plugins: [
     '@typescript-eslint',
-    'import'
+    'import',
+    'unused-imports'
   ],
   root: true,
   rules: {
