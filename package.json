@@ -1,6 +1,6 @@
 {
   "name": "@tilted-tm/eslint-config",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Default eslint config for Tilted projects",
   "main": "index.js",
   "repository": {
@@ -30,7 +30,8 @@
     "eslint-plugin-promise": ">= 5.1.0",
     "eslint-plugin-react": ">= 7.26.1",
     "eslint-plugin-react-hooks": ">= 4.2.0",
-    "eslint-plugin-tilted-react": ">= 1.0.1"
+    "eslint-plugin-tilted-react": ">= 1.0.1",
+    "eslint-plugin-unused-imports": ">= 1.1.5"
   },
   "bugs": {
     "url": "https://github.com/tilted-tm/eslint-config/issues"

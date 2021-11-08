@@ -4,6 +4,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:jsx-a11y/recommended',
     'prettier',
+    'unused-imports',
     'standard',
     'standard-with-typescript'
   ],
@@ -91,7 +92,8 @@ module.exports = {
     quotes: ['error', 'single'],
     semi: 'error',
     'sort-imports': ['error', { ignoreDeclarationSort: true, ignoreCase: true }],
-    'sort-vars': ['error', { 'ignoreCase': true }]
+    'sort-vars': ['error', { 'ignoreCase': true }],
+    'unused-imports/no-unused-imports': 'error'
   },
   settings: {
     'import/resolver': {
