@@ -17,6 +17,7 @@ module.exports = {
     'tilted-react'
   ],
   rules: {
+    'jsx-a11y/no-onchange': 'off',
     'jsx-quotes': ['error', 'prefer-single'],
     'react-hooks/exhaustive-deps': 'off',
     'react-hooks/rules-of-hooks': 'error',
