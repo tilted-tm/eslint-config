@@ -41,3 +41,19 @@ module.exports = {
   extends: '@tilted-tm/react'
 }
 ```
+
+
+### React Native
+Using `.eslintrc.json`:
+```json
+{
+  "extends": "@tilted-tm/react-native"
+}
+```
+
+Using `.eslintrc.js`:
+```javascript
+module.exports = {
+  extends: '@tilted-tm/react-native'
+}
+```
