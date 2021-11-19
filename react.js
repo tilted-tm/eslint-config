@@ -1,8 +1,8 @@
 module.exports = {
   extends: [
     './index.js',
-    'plugin:react/jsx-runtime',
-    'standard-react'
+    'standard-react',
+    'plugin:react/jsx-runtime'
   ],
   globals: {
     JSX: true
