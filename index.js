@@ -81,6 +81,14 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
     'no-console': ['error', { allow: ['warn', 'error'] }],
+    'no-multiple-empty-lines': [
+      'error',
+      {
+        max: 2,
+        maxEOF: 0,
+        maxBOF: 0
+      }
+    ],
     'no-restricted-imports': ['error', {
       patterns: [{
         group: ['.*'],
