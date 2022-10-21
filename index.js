@@ -38,6 +38,7 @@ module.exports = {
     }],
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-use-before-define': 'error',
+    '@typescript-eslint/space-before-blocks': 'error',
     'space-infix-ops': 'off',
     '@typescript-eslint/space-infix-ops': ['error', { 'int32Hint': false }],
     '@typescript-eslint/strict-boolean-expressions': 'off',
