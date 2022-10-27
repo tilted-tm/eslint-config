@@ -18,6 +18,9 @@ module.exports = {
   plugins: [
     '@typescript-eslint',
     'import',
+    'sort-destructure-keys',
+    'sort-keys-fix',
+    'typescript-sort-keys',
     'unused-imports'
   ],
   root: true,
@@ -60,8 +63,8 @@ module.exports = {
       'error',
       {
         alphabetize: {
-          order: 'asc',
-          caseInsensitive: false
+          caseInsensitive: false,
+          order: 'asc'
         },
         groups: [
           ['builtin'],
@@ -100,20 +103,24 @@ module.exports = {
     'no-use-before-define': 'off',
     quotes: ['error', 'single'],
     semi: 'error',
+    'sort-destructure-keys/sort-destructure-keys': ['error', { caseSensitive: false }],
     'sort-imports': ['error', { ignoreDeclarationSort: true, ignoreCase: true }],
+    'sort-keys-fix/sort-keys-fix': ['error', 'asc', { caseSensitive: false, natural: true }],
+    'typescript-sort-keys/interface': ['error', 'asc', { caseSensitive: false, natural: true, requiredFirst: false }],
+    'typescript-sort-keys/string-enum': ['error', 'asc', { caseSensitive: false }],
     'sort-vars': ['error', { 'ignoreCase': true }],
     'unused-imports/no-unused-imports': 'error'
   },
   settings: {
     'import/resolver': {
       alias: {
+        extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
         map: [
           ['@assets', './src/assets'],
           ['@components', './src/components'],
           ['@screens', './src/screens'],
           ['@services', './src/services']
-        ],
-        extensions: ['.js', '.jsx', '.json', '.ts', '.tsx']
+        ]
       },
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx']
