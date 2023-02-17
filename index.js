@@ -39,10 +39,17 @@ module.exports = {
         'requireLast': false
       }
     }],
+    '@typescript-eslint/no-misused-promises': [
+      'error',
+      {
+        checksVoidReturn: {
+          attributes: false
+        }
+      }
+    ],
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-use-before-define': 'error',
     '@typescript-eslint/space-before-blocks': 'error',
-    'space-infix-ops': 'off',
     '@typescript-eslint/space-infix-ops': ['error', { 'int32Hint': false }],
     '@typescript-eslint/strict-boolean-expressions': 'off',
     'brace-style': ['error', '1tbs'],
@@ -108,6 +115,7 @@ module.exports = {
     'sort-destructure-keys/sort-destructure-keys': ['error', { caseSensitive: false }],
     'sort-imports': ['error', { ignoreDeclarationSort: true, ignoreCase: true }],
     'sort-keys-fix/sort-keys-fix': ['error', 'asc', { caseSensitive: false, natural: true }],
+    'space-infix-ops': 'off',
     'typescript-sort-keys/interface': ['error', 'asc', { caseSensitive: false, natural: true, requiredFirst: false }],
     'typescript-sort-keys/string-enum': ['error', 'asc', { caseSensitive: false }],
     'sort-vars': ['error', { 'ignoreCase': true }],
