@@ -23,7 +23,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react/destructuring-assignment': 'error',
-    'react/jsx-closing-bracket-location': ['error', 'props-aligned'],
+    'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
     'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx', '.tsx'] }],
     'react/jsx-handler-names': 'off',
     'react/jsx-indent': ['error', 2],
@@ -33,6 +33,15 @@ module.exports = {
     'react/jsx-tag-spacing': 'error',
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
+    'react/jsx-wrap-multilines': ['error', {
+      arrow: 'parens-new-line',
+      assignment: 'parens-new-line',
+      condition: 'parens-new-line',
+      declaration: 'parens-new-line',
+      logical: 'parens-new-line',
+      prop: 'parens-new-line',
+      return: 'parens-new-line'
+    }],
     'react/self-closing-comp': 'error',
     'tilted-react/too-few-lines-between-jsx-elements': 'error'
   },
