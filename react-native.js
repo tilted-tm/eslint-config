@@ -2,7 +2,16 @@ module.exports = {
   extends: [
     './react.js'
   ],
+  overrides: [
+    {
+      files: ['./**/*.styles.ts'],
+      rules: {
+        'ember-suave/lines-between-object-properties': ['error', 'always', { exceptAfterSingleLine: true }]
+      }
+    }
+  ],
   plugins: [
+    'ember-suave',
     'react-native',
     '@react-native-community'
   ],

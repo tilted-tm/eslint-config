@@ -23,6 +23,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react/destructuring-assignment': 'error',
+    'react/jsx-closing-bracket-location': 'error',
     'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx', '.tsx'] }],
     'react/jsx-handler-names': 'off',
     'react/jsx-indent': ['error', 2],

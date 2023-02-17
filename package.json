@@ -1,6 +1,6 @@
 {
   "name": "@tilted-tm/eslint-config",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "Default eslint config for Tilted projects",
   "main": "index.js",
   "repository": {
@@ -25,6 +25,7 @@
     "eslint": ">= 7.32.0",
     "eslint-import-resolver-alias": ">= 1.1.2",
     "eslint-plugin-cypress": ">= 2.12.1",
+    "eslint-plugin-ember-suave": ">= 2.0.1",
     "eslint-plugin-jsx-a11y": ">= 6.5.1",
     "eslint-plugin-node": ">= 11.1.0",
     "eslint-plugin-prettier": ">= 4.0.0",

@@ -85,10 +85,11 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
     'no-console': ['error', { allow: ['warn', 'error'] }],
+    'newline-before-return': 'error',
     'no-multiple-empty-lines': [
       'error',
       {
-        max: 2,
+        max: 1,
         maxEOF: 0,
         maxBOF: 0
       }
@@ -101,6 +102,7 @@ module.exports = {
     }],
     'no-trailing-spaces': 'error',
     'no-use-before-define': 'off',
+    'object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
     quotes: ['error', 'single'],
     semi: 'error',
     'sort-destructure-keys/sort-destructure-keys': ['error', { caseSensitive: false }],
