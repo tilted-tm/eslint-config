@@ -13,7 +13,7 @@ module.exports = {
   plugins: [
     'ember-suave',
     'react-native',
-    '@react-native-community'
+    '@react-native'
   ],
   rules: {
     'react-native/no-color-literals': 'error',
