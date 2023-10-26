@@ -42,6 +42,7 @@ module.exports = {
       prop: 'parens-new-line',
       return: 'parens-new-line'
     }],
+    'react/react-in-jsx-scope': 'off',
     'react/self-closing-comp': 'error',
     'tilted-react/too-few-lines-between-jsx-elements': 'error'
   },
