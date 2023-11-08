@@ -14,8 +14,7 @@ module.exports = {
   },
   plugins: [
     'react',
-    'react-hooks',
-    'tilted-react'
+    'react-hooks'
   ],
   rules: {
     '@stylistic/jsx-closing-bracket-location': ['error', 'line-aligned'],

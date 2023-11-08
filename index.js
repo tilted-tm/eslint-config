@@ -7,6 +7,12 @@ module.exports = {
     'standard',
     'standard-with-typescript'
   ],
+  overrides: [{
+    files: ['**/__tests__/*.tsx', '**/__tests__/*.ts'],
+    rules: {
+      'i18next/no-literal-string': 'off'
+    }
+  }],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2020,
@@ -18,11 +24,13 @@ module.exports = {
   plugins: [
     '@stylistic',
     '@typescript-eslint',
+    'i18next',
     'import',
     'sort-destructure-keys',
     'sort-keys-fix',
     'typescript-sort-keys',
-    'unused-imports'
+    'unused-imports',
+    'import-newlines'
   ],
   root: true,
   rules: {
@@ -49,22 +57,40 @@ module.exports = {
     ],
     '@stylistic/no-trailing-spaces': 'error',
     '@stylistic/object-curly-newline': ['error', {
+      ExportDeclaration: {
+        consistent: true,
+        minProperties: 2,
+        multiline: true
+      },
+      ImportDeclaration: {
+        consistent: true,
+        minProperties: 2,
+        multiline: true
+      },
       ObjectExpression: 'always',
-      ObjectPattern: { 'multiline': true, 'minProperties': 2, consistent: true },
-      ImportDeclaration: { 'multiline': true, 'minProperties': 2, consistent: true },
-      ExportDeclaration: { 'multiline': true, 'minProperties': 2, consistent: true }
+      ObjectPattern: {
+        consistent: true,
+        minProperties: 2,
+        multiline: true
+      }
     }],
-    '@stylistic/object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
+    '@stylistic/object-property-newline': ['error', {
+      allowAllPropertiesOnSameLine: false
+    }],
     '@stylistic/padding-line-between-statements': [
       'error',
       { blankLine: 'always', prev: '*', next: 'return' }
     ],
     '@stylistic/quotes': ['error', 'single'],
-    '@stylistic/semi': 'error',
+    '@stylistic/semi': ['error', 'never'],
     '@stylistic/space-before-blocks': 'error',
     '@stylistic/space-infix-ops': ['error', { 'int32Hint': false }],
+    '@typescript-eslint/consistent-type-imports': ['error', {
+      prefer: 'no-type-imports'
+    }],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/indent': 'off',
     '@typescript-eslint/no-misused-promises': [
       'error',
       {
@@ -78,6 +104,7 @@ module.exports = {
     '@typescript-eslint/strict-boolean-expressions': 'off',
     curly: ['error', 'all'],
     'default-param-last': 'off',
+    'i18next/no-literal-string': 'error',
     'import/prefer-default-export': 'off',
     'import/extensions': [
       'error',
@@ -109,6 +136,14 @@ module.exports = {
           { pattern: '@screens/**', group: 'parent' },
           { pattern: '@services/**', group: 'parent' }
         ]
+      }
+    ],
+    'import-newlines/enforce': [
+      'error',
+      {
+        items: 1,
+        'max-len': 120,
+        semi: false
       }
     ],
     'jsx-a11y/anchor-is-valid': 'off',
