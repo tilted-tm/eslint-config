@@ -18,22 +18,17 @@ module.exports = {
     'tilted-react'
   ],
   rules: {
-    'jsx-a11y/no-onchange': 'off',
-    'jsx-quotes': ['error', 'prefer-single'],
-    'react-hooks/exhaustive-deps': 'off',
-    'react-hooks/rules-of-hooks': 'error',
-    'react/destructuring-assignment': 'error',
-    'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
-    'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx', '.tsx'] }],
-    'react/jsx-handler-names': 'off',
-    'react/jsx-indent': ['error', 2],
-    'react/jsx-indent-props': ['error', 2],
-    'react/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
-    'react/jsx-sort-props': 'error',
-    'react/jsx-tag-spacing': 'error',
-    'react/jsx-uses-react': 'error',
-    'react/jsx-uses-vars': 'error',
-    'react/jsx-wrap-multilines': ['error', {
+    '@stylistic/jsx-closing-bracket-location': ['error', 'line-aligned'],
+    '@stylistic/jsx-indent': ['error', 2],
+    '@stylistic/jsx-indent-props': ['error', 2],
+    '@stylistic/jsx-newline': ['error', {
+      allowMultilines: true,
+      prevent: true
+    }],
+    '@stylistic/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
+    '@stylistic/jsx-sort-props': 'error',
+    '@stylistic/jsx-tag-spacing': 'error',
+    '@stylistic/jsx-wrap-multilines': ['error', {
       arrow: 'parens-new-line',
       assignment: 'parens-new-line',
       condition: 'parens-new-line',
@@ -42,9 +37,17 @@ module.exports = {
       prop: 'parens-new-line',
       return: 'parens-new-line'
     }],
+    'jsx-a11y/no-onchange': 'off',
+    'jsx-quotes': ['error', 'prefer-single'],
+    'react-hooks/exhaustive-deps': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react/destructuring-assignment': 'error',
+    'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx', '.tsx'] }],
+    'react/jsx-handler-names': 'off',
+    'react/jsx-uses-react': 'error',
+    'react/jsx-uses-vars': 'error',
     'react/react-in-jsx-scope': 'off',
-    'react/self-closing-comp': 'error',
-    'tilted-react/too-few-lines-between-jsx-elements': 'error'
+    'react/self-closing-comp': 'error'
   },
   settings: {
     react: {

@@ -16,6 +16,7 @@ module.exports = {
     createDefaultProgram: true
   },
   plugins: [
+    '@stylistic',
     '@typescript-eslint',
     'import',
     'sort-destructure-keys',
@@ -25,11 +26,10 @@ module.exports = {
   ],
   root: true,
   rules: {
-    '@typescript-eslint/comma-dangle': 'error',
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/indent': ['error', 2],
-    '@typescript-eslint/member-delimiter-style': ['error', {
+    '@stylistic/brace-style': ['error', '1tbs'],
+    '@stylistic/comma-dangle': 'error',
+    '@stylistic/indent': ['error', 2],
+    '@stylistic/member-delimiter-style': ['error', {
       'multiline': {
         'delimiter': 'none',
         'requireLast': true
@@ -39,6 +39,32 @@ module.exports = {
         'requireLast': false
       }
     }],
+    '@stylistic/no-multiple-empty-lines': [
+      'error',
+      {
+        max: 1,
+        maxEOF: 0,
+        maxBOF: 0
+      }
+    ],
+    '@stylistic/no-trailing-spaces': 'error',
+    '@stylistic/object-curly-newline': ['error', {
+      ObjectExpression: 'always',
+      ObjectPattern: { 'multiline': true, 'minProperties': 2, consistent: true },
+      ImportDeclaration: { 'multiline': true, 'minProperties': 2, consistent: true },
+      ExportDeclaration: { 'multiline': true, 'minProperties': 2, consistent: true }
+    }],
+    '@stylistic/object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
+    '@stylistic/padding-line-between-statements': [
+      'error',
+      { blankLine: 'always', prev: '*', next: 'return' }
+    ],
+    '@stylistic/quotes': ['error', 'single'],
+    '@stylistic/semi': 'error',
+    '@stylistic/space-before-blocks': 'error',
+    '@stylistic/space-infix-ops': ['error', { 'int32Hint': false }],
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-misused-promises': [
       'error',
       {
@@ -49,10 +75,7 @@ module.exports = {
     ],
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-use-before-define': 'error',
-    '@typescript-eslint/space-before-blocks': 'error',
-    '@typescript-eslint/space-infix-ops': ['error', { 'int32Hint': false }],
     '@typescript-eslint/strict-boolean-expressions': 'off',
-    'brace-style': ['error', '1tbs'],
     curly: ['error', 'all'],
     'default-param-last': 'off',
     'import/prefer-default-export': 'off',
@@ -88,34 +111,19 @@ module.exports = {
         ]
       }
     ],
-    indent: 'off',
     'jsx-a11y/anchor-is-valid': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
     'no-console': ['error', { allow: ['warn', 'error'] }],
-    'newline-before-return': 'error',
-    'no-multiple-empty-lines': [
-      'error',
-      {
-        max: 1,
-        maxEOF: 0,
-        maxBOF: 0
-      }
-    ],
     'no-restricted-imports': ['error', {
       patterns: [{
         group: ['.*'],
         message: 'Use alias imports like @components/... instead'
       }]
     }],
-    'no-trailing-spaces': 'error',
     'no-use-before-define': 'off',
-    'object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
-    quotes: ['error', 'single'],
-    semi: 'error',
     'sort-destructure-keys/sort-destructure-keys': ['error', { caseSensitive: false }],
     'sort-imports': ['error', { ignoreDeclarationSort: true, ignoreCase: true }],
     'sort-keys-fix/sort-keys-fix': ['error', 'asc', { caseSensitive: false, natural: true }],
-    'space-infix-ops': 'off',
     'typescript-sort-keys/interface': ['error', 'asc', { caseSensitive: false, natural: true, requiredFirst: false }],
     'typescript-sort-keys/string-enum': ['error', 'asc', { caseSensitive: false }],
     'sort-vars': ['error', { 'ignoreCase': true }],
