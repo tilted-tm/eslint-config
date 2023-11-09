@@ -21,8 +21,7 @@ module.exports = {
     '@stylistic/jsx-indent': ['error', 2],
     '@stylistic/jsx-indent-props': ['error', 2],
     '@stylistic/jsx-newline': ['error', {
-      allowMultilines: true,
-      prevent: true
+      prevent: false
     }],
     '@stylistic/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
     '@stylistic/jsx-sort-props': 'error',
