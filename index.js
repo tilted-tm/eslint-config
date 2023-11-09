@@ -15,10 +15,6 @@ module.exports = {
       }
     },
     {
-      extends: ['plugin:@typescript-eslint/disable-type-checked'],
-      files: ['./**/*.js']
-    },
-    {
       files: ['./**/__tests__/*.ts*', './**/__mocks__/*.ts*'],
       rules: {
         '@typescript-eslint/await-thenable': 'off',

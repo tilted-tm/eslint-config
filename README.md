@@ -12,29 +12,39 @@ npm install --save-dev @tilted-tm/eslint-config
 ```
 and
 ```shell script
-yarn add --dev eslint-import-resolver-alias eslint-plugin-cypress eslint-plugin-jsx-a11y eslint-plugin-node eslint-plugin-prettier eslint-plugin-promise eslint-plugin-sort-destructure-keys eslint-plugin-sort-keys-fix eslint-plugin-typescript-sort-keys eslint-plugin-unused-imports
+yarn add --dev @stylistic\/eslint-plugin @typescript-eslint\/eslint-plugin @typescript-eslint\/parser eslint-import-resolver-alias eslint-plugin-cypress eslint-plugin-i18next eslint-plugin-import eslint-plugin-import-newlines eslint-plugin-jsx-a11y eslint-plugin-n eslint-plugin-newline-destructuring eslint-plugin-prettier eslint-plugin-promise eslint-plugin-sort-destructure-keys eslint-plugin-sort-keys-fix eslint-plugin-typescript-sort-keys eslint-plugin-unused-imports
 
 # or using npm
 
-npm install --save-dev eslint-import-resolver-alias eslint-plugin-cypress eslint-plugin-jsx-a11y eslint-plugin-node eslint-plugin-prettier eslint-plugin-promise eslint-plugin-sort-destructure-keys eslint-plugin-sort-keys-fix eslint-plugin-typescript-sort-keys eslint-plugin-unused-imports
+npm install --save-dev @stylistic\/eslint-plugin @typescript-eslint\/eslint-plugin @typescript-eslint\/parser eslint-import-resolver-alias eslint-plugin-cypress eslint-plugin-i18next eslint-plugin-import eslint-plugin-import-newlines eslint-plugin-jsx-a11y eslint-plugin-n eslint-plugin-newline-destructuring eslint-plugin-prettier eslint-plugin-promise eslint-plugin-sort-destructure-keys eslint-plugin-sort-keys-fix eslint-plugin-typescript-sort-keys eslint-plugin-unused-imports
 ```
 
 ### For Next and React
 ```shell script
-yarn add --dev eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-tilted-react
+yarn add --dev eslint-plugin-react eslint-plugin-react-hooks
 
 # or using npm
 
-npm install --save-dev eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-tilted-react
+npm install --save-dev eslint-plugin-react eslint-plugin-react-hooks
 ```
 
 ### For React Native
 ```shell script
-yarn add --dev eslint-plugin-ember-suave eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-tilted-react
+yarn add --dev eslint-plugin-ember-suave eslint-plugin-react eslint-plugin-react-hooks
 
 # or using npm
 
-npm install --save-dev eslint-plugin-ember-suave eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-tilted-react
+npm install --save-dev eslint-plugin-ember-suave eslint-plugin-react eslint-plugin-react-hooks
+```
+
+Add this to your .eslintrc.js
+```js
+  overrides: [
+    {
+      extends: ['plugin:@typescript-eslint/disable-type-checked'],
+      files: ['./**/*.js']
+    }
+  ]
 ```
 
 ## Usage
