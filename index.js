@@ -7,12 +7,25 @@ module.exports = {
     'standard',
     'standard-with-typescript'
   ],
-  overrides: [{
-    files: ['**/__tests__/*.tsx', '**/__tests__/*.ts'],
-    rules: {
-      'i18next/no-literal-string': 'off'
+  overrides: [
+    {
+      files: ['**/__tests__/*.tsx', '**/__tests__/*.ts'],
+      rules: {
+        'i18next/no-literal-string': 'off'
+      }
+    },
+    {
+      extends: ['plugin:@typescript-eslint/disable-type-checked'],
+      files: ['./**/*.js']
+    },
+    {
+      files: ['./**/__tests__/*.ts*', './**/__mocks__/*.ts*'],
+      rules: {
+        '@typescript-eslint/await-thenable': 'off',
+        '@typescript-eslint/no-confusing-void-expression': 'off'
+      }
     }
-  }],
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2020,
@@ -68,7 +81,11 @@ module.exports = {
         minProperties: 2,
         multiline: true
       },
-      ObjectExpression: 'always',
+      ObjectExpression: {
+        consistent: true,
+        minProperties: 1,
+        multiline: true
+      },
       ObjectPattern: {
         consistent: true,
         minProperties: 2,
@@ -92,6 +109,7 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/indent': 'off',
+    '@typescript-eslint/member-delimiter-style': 'off',
     '@typescript-eslint/no-misused-promises': [
       'error',
       {
