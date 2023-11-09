@@ -26,6 +26,7 @@ module.exports = {
     '@typescript-eslint',
     'i18next',
     'import',
+    'newline-destructuring',
     'sort-destructure-keys',
     'sort-keys-fix',
     'typescript-sort-keys',
@@ -148,6 +149,10 @@ module.exports = {
     ],
     'jsx-a11y/anchor-is-valid': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
+    'newline-destructuring/newline': ['error', {
+      items: 1,
+      maxLength: 120
+    }],
     'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-restricted-imports': ['error', {
       patterns: [{
